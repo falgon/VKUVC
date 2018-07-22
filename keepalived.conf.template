@@ -1,0 +1,28 @@
+vrrp_instance AWS {
+    state {{.State}}
+    nopreempt
+    interface eth0
+
+    unicast_peer {
+    {{range $var := .UnicastPeer}}
+        {{$var}}
+    {{end}}
+    }
+
+    lvs_sync_daemon_interface eth0
+    virtual_router_id 100
+    priority 100
+    advert_int 1
+
+    authentication {
+        auth_type PASS
+        auth_pass aliv
+    }
+
+    virtual_ipaddress {
+	{{.VIP}}
+    }
+
+    {{.NotifyMaster}}
+}
+

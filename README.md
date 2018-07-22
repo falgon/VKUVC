@@ -16,10 +16,10 @@ $ git clone https://github.com/falgon/VKUVC && cd VKUVC && make get && make
 
 This tool is based on the contents of the following items.
 
-* Perform redundancy with AWS EC2(At least two EC 2 instances of normal system and standby system are necessary).
+* Perform redundancy with AWS EC2(At least two EC2 instances of normal system and standby system are necessary).
 * Routing setting to EC2 instance of normal system is completed with EC2-VPC.
 
-### ./dst/keapalived\_configure
+### ./dst/keepalived\_configure
 
 The tool to automatically generate keepalived.conf. The flags are:
 ```sh
@@ -78,7 +78,7 @@ vrrp_instance AWS {
 
 ### ./dst/notify\_master
 
-If you use it with the previous configure, just put ./dst/notify\_master under /etc/keepalived. Flags:
+If you use it with the previous configure, just put `./dst/notify_master` under `/etc/keepalived`. Flags:
 ```sh
 % ./dst/notify_master --help                 (18-07-23)[5:01:34]
 Usage of ./dst/notify_master:

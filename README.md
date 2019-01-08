@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/falgon/VKUVC.svg?branch=master)](https://travis-ci.org/falgon/VKUVC)
 
-[Here](https://falgon.github.io/roki.log/posts/2018/%207/23/ec2failover/)'s a post covering the implementation in more detail.
+[Here](https://falgon.github.io/roki.log/posts/2018/%207月/23/ec2failover/)'s a post covering the implementation in more detail.
 The Utility for achieving availability using Keepalived with VPC-EC2. Build:
 
 ```sh
